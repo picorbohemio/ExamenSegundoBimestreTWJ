@@ -10,12 +10,28 @@ module.exports = {
   attributes: {
     nombre:{
       type:'string',
-
+      required:true
     },
     apellido:{
-      type:'string'
+      type:'string',
+      required:true
     },
-
+    goles:{
+      type:'number',
+      required:true
+    },
+    numeroCamiseta:{
+      type:'number',
+      required:true
+    },
+    fechaIngreso:{
+      type:'string',
+      required:true
+    },
+    urlImagen:{
+      type:'string',
+      required:true
+    },
     equipoIDFK: {
       model: 'equipo'
     }
