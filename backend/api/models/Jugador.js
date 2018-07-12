@@ -28,6 +28,10 @@ module.exports = {
       type:'string',
       required:true
     },
+    valor:{
+      type:'number',
+      required:true
+    },
     urlImagen:{
       type:'string',
       required:true
