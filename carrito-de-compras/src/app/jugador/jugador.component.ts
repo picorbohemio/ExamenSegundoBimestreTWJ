@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
+import {ComprasService} from "../servicios/compras.service";
 
 @Component({
   selector: 'app-jugador',
@@ -9,12 +10,12 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class JugadorComponent implements OnInit {
 
-  jugador;
+  jugador=[];
   _parametros:any;
 
   nombre:string;
 
-  constructor(private _httpClient: HttpClient, private _activetedRoute:ActivatedRoute) { }
+  constructor(private _httpClient: HttpClient, private _activetedRoute:ActivatedRoute, private _compras: ComprasService) { }
 
   ngOnInit() {
     this.cargarJugador();
@@ -26,9 +27,10 @@ export class JugadorComponent implements OnInit {
       this._parametros=parametros;
       this._httpClient.get('http://localhost:1337/jugador?id='+this._parametros.idjugador)
         .subscribe(
-          (res)=>{
+          (res:any[])=>{
             this.jugador=res;
             console.log(this.jugador);
+            console.log(this.jugador[0].nombre);
           },
           (err)=>{
             console.log(err);
@@ -37,9 +39,11 @@ export class JugadorComponent implements OnInit {
 
 
     });
+  }
 
-
-
+  comprarJugador(){
+    this._compras.ingresarJugadores(this.jugador);
+    console.log(this._compras)
   }
 
 }

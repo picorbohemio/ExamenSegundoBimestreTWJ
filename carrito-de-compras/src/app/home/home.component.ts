@@ -10,10 +10,11 @@ import {HttpClient} from "@angular/common/http";
 export class HomeComponent implements OnInit {
 
   clickEnBuscar: EventEmitter<object> = new EventEmitter();
-  arrayEquipos;
-  arrayJugadores : object;
+  equipos;
+  jugadores;
   searchText:string;
-  array=[];
+  arrayNombresEquipos=[];
+  arrayNombresJugadores=[];
 
 
 
@@ -29,10 +30,8 @@ export class HomeComponent implements OnInit {
         results=>{
           console.log(results);
           //this.arrayEquipos=JSON.parse(JSON.stringify(results));
-
-          this.arrayEquipos=results;
-          //console.log(this.arrayEquipos[0].nombre)
-          this.llenar();
+          this.equipos=results;
+          this.llenarEquipos();
 
         },
         (error)=>{
@@ -50,7 +49,8 @@ export class HomeComponent implements OnInit {
       .subscribe(
         results=>{
           console.log(results);
-          this.arrayJugadores=results;
+          this.jugadores=results;
+          this.llenarJugadores()
 
         },
         (error)=>{
@@ -65,9 +65,15 @@ export class HomeComponent implements OnInit {
 
   }
 
-  llenar(){
-    for (var i = 0; i < this.arrayEquipos.length; i++) {
-      this.array.push(this.arrayEquipos[i].nombre);
+  llenarEquipos(){
+    for (var i = 0; i < this.equipos.length; i++) {
+      this.arrayNombresEquipos.push(this.equipos[i].nombre);
+    }
+  }
+
+  llenarJugadores(){
+    for (var i = 0; i < this.jugadores.length; i++) {
+      this.arrayNombresJugadores.push(this.jugadores[i].nombre);
     }
   }
 
