@@ -3,10 +3,18 @@
   <div class="col-sm-12">
     <div class="card">
       <div class="card-body">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="icon ion-md-search"></i> Buscar</button>
-        </form>
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <input class="form-control mr-sm-2" [(ngModel)]="searchText" type="search" placeholder="Buscar" aria-label="Search">
+          </div>
+          <div class="col-sm-3">
+            <h1>{{searchText}}</h1>
+
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="button" ><i class="icon ion-md-search"></i> Buscar</button>
+          </div>
+          <div class="col-sm-3"></div>
+        </div>
       </div>
     </div>
 
@@ -18,7 +26,14 @@
         <h3>EQUIPOS:</h3>
         <hr class="my-4">
         <div class="row">
-          <div class="col-sm-4" *ngFor="let equipo of arrayEquipos">
+          <div class="col-sm-4" *ngFor="let a of array | search: searchText ">
+            <div class="col-sm-4" *ngFor="let equipo of arrayEquipos ">
+            <div *ngIf="equipo.nombre==a">
+              <h5>{{equipo.liga}}</h5>
+            </div>
+          </div>
+          </div>
+          <div class="col-sm-4" *ngFor="let equipo of arrayEquipos ">
             <div class="card">
               <div align="center"><img class="card-img-top img-fluid" style="width: 50%" [src]=equipo.urlImagen alt="Card image cap"></div>
 
@@ -65,4 +80,6 @@
   </div>
 
 </div>
+
+
 

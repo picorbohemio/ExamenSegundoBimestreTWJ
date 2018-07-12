@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     HomeComponent,
     EquipoComponent,
     JugadorComponent,
-    CarritoComponent
+    CarritoComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

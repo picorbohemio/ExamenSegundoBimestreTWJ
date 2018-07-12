@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
 
   clickEnBuscar: EventEmitter<object> = new EventEmitter();
   arrayEquipos;
-  arrayJugadores;
+  arrayJugadores : object;
+  searchText:string;
+  array=[];
 
 
 
@@ -26,7 +28,12 @@ export class HomeComponent implements OnInit {
       .subscribe(
         results=>{
           console.log(results);
+          //this.arrayEquipos=JSON.parse(JSON.stringify(results));
+
           this.arrayEquipos=results;
+          //console.log(this.arrayEquipos[0].nombre)
+          this.llenar();
+
         },
         (error)=>{
           console.log('Error',error);
@@ -44,6 +51,7 @@ export class HomeComponent implements OnInit {
         results=>{
           console.log(results);
           this.arrayJugadores=results;
+
         },
         (error)=>{
           console.log('Error',error);
@@ -52,7 +60,20 @@ export class HomeComponent implements OnInit {
           console.log('COMPLETO!')
         }
       );
+    //this.llenar()
+
+
   }
+
+  llenar(){
+    for (var i = 0; i < this.arrayEquipos.length; i++) {
+      this.array.push(this.arrayEquipos[i].nombre);
+    }
+  }
+
+
+
+
 
 
 
