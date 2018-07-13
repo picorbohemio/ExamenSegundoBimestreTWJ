@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
   arrayNombresEquipos=[];
   arrayNombresJugadores=[];
 
+  j:string;
+
 
 
   constructor(private _httpClient: HttpClient) { }

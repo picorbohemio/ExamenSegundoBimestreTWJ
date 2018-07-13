@@ -7,7 +7,8 @@ export class ComprasService {
 
   private _carrito=[];
   private _indice=0;
-  private _estado=false;
+  private _estado:boolean;
+
 
   constructor() {}
 
@@ -32,17 +33,28 @@ export class ComprasService {
   }
 
   public borrarJugadores(indice){
-    this._carrito.splice(indice);
+    this._carrito.splice(indice,1);
   }
 
   public buscarJugadores(id:number, equipoIDFK:number){
 
-    for (let i = 0; i < this._carrito.length; i++) {
+    if(this._carrito.length==0){
+      this._estado=false;
+    }else{
+console.log('tam',this._carrito.length)
+
+    for (var i = 0; i < this._carrito.length; i++) {
+      console.log('carrito',this._carrito[i])
       if(this._carrito[i].id==id && this._carrito[i].equipoIDFK==equipoIDFK){
         this._estado=true;
+        break;
+      }else{
+        this._estado=false;
       }
     }
-    return this._estado
+
+    }
+    return this._estado;
   }
 
 
@@ -52,5 +64,9 @@ export class ComprasService {
 
   public aumentarIndice(){
      this._indice=this._indice+1;
+  }
+
+  public reducirIndice(){
+    this._indice=this._indice-1;
   }
 }

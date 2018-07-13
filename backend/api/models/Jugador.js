@@ -12,10 +12,6 @@ module.exports = {
       type:'string',
       required:true
     },
-    apellido:{
-      type:'string',
-      required:true
-    },
     goles:{
       type:'number',
       required:true

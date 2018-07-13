@@ -35,6 +35,8 @@ export class JugadorComponent implements OnInit {
             console.log(this.jugador);
             console.log(this.jugador[0].nombre);
             this.estado=this._compras.buscarJugadores(this.jugador[0].id,this.jugador[0].equipoIDFK.id);
+            console.log(this.estado);
+            console.log(this._compras.getJugadores());
           },
           (err)=>{
             console.log(err);
