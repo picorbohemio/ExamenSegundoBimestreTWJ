@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ComprasService} from "../servicios/compras.service";
+import {UsuarioService} from "../servicios/usuario.service";
 
 @Component({
   selector: 'app-carrito',
@@ -9,13 +10,24 @@ import {ComprasService} from "../servicios/compras.service";
 export class CarritoComponent implements OnInit {
 
   compras;
+  usuario;
   total=0;
-  constructor(private _compras: ComprasService) { }
+
+  nombrefac:string;
+  correofac: string;
+  direccionfac:string;
+
+  constructor(private _compras: ComprasService, private _usuario: UsuarioService) { }
 
 
   ngOnInit() {
     this.cargarCompras();
+    this.cargarUsuario();
     this.calcularTotal();
+
+    this.nombrefac=this.usuario[0].nombre;
+    this.correofac=this.usuario[0].correoElectronico;
+    this.direccionfac=this.usuario[0].direccion;
   }
 
   cargarCompras(){
@@ -38,5 +50,27 @@ export class CarritoComponent implements OnInit {
     alert('Compra con exito')
   }
 
+  cargarUsuario(){
+    this.usuario=this._usuario.getUsuario();
+  }
+
+  esNulos(){
+    if(
+      this.nombrefac==null||
+      this.direccionfac==null||
+      this.correofac==null){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
+  guardarInformacion(event, formData){
+    console.log(event);
+    console.log(formData.value);
+    this.nombrefac=formData.value.nombre;
+    this.correofac=formData.value.correo;
+    this.direccionfac=formData.value.direccion;
+  }
 
 }

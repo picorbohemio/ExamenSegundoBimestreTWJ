@@ -110,7 +110,7 @@ export class SearchPipe implements PipeTransform {
       return [];
     }
     if (!searchText) {
-      return [];
+      return items;
     }
 
     searchText = this.removeDiacritics(searchText.toLowerCase());

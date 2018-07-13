@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12af2697-def2-4a98-85ad-add4d4f0325d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/equipo/equipo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/equipo/equipo.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/compras.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/compras.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrito-de-compras/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/carrito-de-compras/src/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="carrito.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="carrito.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="286">
+              <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -44,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carrito.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html">
+      <file leaf-file-name="usuario.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="170">
+              <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
             </state>
           </provider>
         </entry>
@@ -56,8 +45,17 @@
       <file leaf-file-name="compras.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/servicios/compras.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="663">
+              <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carrito.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="139" column="16" lean-forward="true" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -97,13 +95,13 @@
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/nav-bar/nav-bar.component.ts" />
-        <option value="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.html" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/equipo/equipo.component.html" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.ts" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/compras.service.ts" />
-        <option value="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html" />
+        <option value="$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts" />
         <option value="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.ts" />
+        <option value="$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html" />
       </list>
     </option>
   </component>
@@ -249,26 +247,26 @@
       <option name="presentableId" value="Default" />
       <updated>1531260667265</updated>
       <workItem from="1531260668774" duration="33265000" />
-      <workItem from="1531361666998" duration="37231000" />
+      <workItem from="1531361666998" duration="41445000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70496000" />
+    <option name="totallyTimeSpent" value="74710000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4972973" visible="true" weight="0.24963397" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4972973" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36220473" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.36220473" />
       <window_info id="Favorites" order="2" sideWeight="0.5027027" side_tool="true" weight="0.24963397" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -442,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/nav-bar/nav-bar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="132" selection-start-line="18" selection-start-column="132" selection-end-line="18" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/nav-bar/nav-bar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -473,13 +464,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/jugador/jugador.component.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/home/home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -512,27 +496,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/servicios/compras.service.ts">
+    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/nav-bar/nav-bar.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="261">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html">
+    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/servicios/compras.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="663">
+          <caret line="42" column="7" lean-forward="true" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/servicios/usuario.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="286">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carrito-de-compras/src/app/carrito/carrito.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="139" column="16" lean-forward="true" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -14,6 +14,8 @@ export class UsuarioService {
         nickname: 'ldurider',
         nombre: 'Luis Unapanta',
         correoElectronico: 'ldurider@gmail.com',
+        imagen: 'http://www.diazcortez.com.ar/2017/1_cuat/jt27/tp/img/usuario.png',
+        direccion: 'Sector La Gasca'
       }];
   }
 
