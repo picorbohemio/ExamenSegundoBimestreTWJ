@@ -65,46 +65,49 @@
   <div class="col-sm-1"></div>
   <div class=" col-sm-10 jumbotron jumbotron-fluid" *ngIf="compras.length==0">
     <div class="container">
-      <h5>NO EXISTEN REGISTROS DE COMPRAS</h5>
-      <hr class="my-4">
-      <p>TOTAL: $0.00</p>
-    </div>
+      <div class="row">
+        <div class="col-sm-6"><h3>NO EXISTEN REGISTROS DE COMPRAS</h3></div>
+        <div class="col-sm-6"align="right"><h5>TOTAL A PAGAR: {{total | currency }}</h5></div>
+        <div class="col-sm-12"><hr class="my-4"></div>
+      </div>
   </div>
   <div class=" col-sm-10 jumbotron jumbotron-fluid" *ngIf="compras.length>0">
     <div class="container">
-      <h3>JUGADORES:</h3>
-      <hr class="my-4">
+      <div class="row">
+        <div class="col-sm-6"><h3>JUGADORES:</h3></div>
+        <div class="col-sm-6"align="right"><h5>TOTAL A PAGAR: {{total | currency }}</h5></div>
+        <div class="col-sm-12"><hr class="my-4"></div>
+      </div>
     </div>
     <div *ngFor="let compra of compras; let indice=index">
       <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
           <div class="card">
-            <div class="card-header">
-              Producto
-            </div>
+            <div class="card-header">JUGADOR {{indice+1}}</div>
             <div class="card-body">
               <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                   <img class="img-fluid" [src]="compra.urlImagen" alt="">
                 </div>
                 <div class="col-sm-1"></div>
-                <div class="col-sm-9">
+                <div class="col-sm-5">
                   <h5 class="card-title">Nombre: {{compra.nombre}} {{compra.apellido}}</h5>
                   <p class="card-text">Goles: {{compra.goles}}</p>
                   <p class="card-text">Numero de Camiseta: {{compra.numeroCamiseta}}</p>
                   <p class="card-text">Fecha de Ingreso: {{compra.fechaIngreso}}</p>
                   <p class="card-text">Precio: {{compra.valor | currency }}</p>
                 </div>
+                <div class="col-sm-3" align="center">
+                  <button (click)="borrarCompras(indice)" type="button" class="btn btn-danger btn-lg">Eliminar</button>
+                </div>
               </div>
-
-              <button (click)="borrarCompras(indice)" type="button" class="btn btn-primary">Eliminar</button>
             </div>
           </div>
         </div>
         <div class="col-sm-1"></div>
       </div>
-      <p>TOTAL:{{total | currency }}</p>
+
     </div>
   </div>
   <div class="col-sm-1"></div>

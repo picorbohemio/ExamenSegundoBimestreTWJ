@@ -5,7 +5,20 @@
   </div>
 
   <div class=" container col-sm-12" *ngIf="estado==true">
-    <h3>no disponible</h3>
+    <div class="row">
+      <div class="col-sm-12"><br></div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="card bg-light" >
+          <div class="card-header">NO DISPONIBLE</div>
+          <div class="card-body">
+            <h5 class="card-title">Este jugador ya se encuentra en tus compras.</h5>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
   </div>
   <div class=" container col-sm-12" *ngIf="estado==false">
     <div class="row">
