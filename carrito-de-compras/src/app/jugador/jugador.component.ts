@@ -14,8 +14,11 @@ export class JugadorComponent implements OnInit {
   _parametros:any;
 
   nombre:string;
+  estado: boolean;
 
-  constructor(private _httpClient: HttpClient, private _activetedRoute:ActivatedRoute, private _compras: ComprasService) { }
+  constructor(private _httpClient: HttpClient, private _activetedRoute:ActivatedRoute, private _compras: ComprasService) {
+
+  }
 
   ngOnInit() {
     this.cargarJugador();
@@ -31,6 +34,7 @@ export class JugadorComponent implements OnInit {
             this.jugador=res;
             console.log(this.jugador);
             console.log(this.jugador[0].nombre);
+            this.estado=this._compras.buscarJugadores(this.jugador[0].id,this.jugador[0].equipoIDFK.id);
           },
           (err)=>{
             console.log(err);
@@ -43,7 +47,10 @@ export class JugadorComponent implements OnInit {
 
   comprarJugador(){
     this._compras.ingresarJugadores(this.jugador);
+    this._compras.aumentarIndice();
     console.log(this._compras)
   }
+
+
 
 }

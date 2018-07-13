@@ -10,6 +10,9 @@ import { EquipoComponent } from './equipo/equipo.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { SearchPipe } from './pipes/search.pipe';
     EquipoComponent,
     JugadorComponent,
     CarritoComponent,
-    SearchPipe
+    SearchPipe,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
