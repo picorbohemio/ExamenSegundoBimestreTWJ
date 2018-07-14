@@ -67,8 +67,8 @@ export class CarritoComponent implements OnInit {
   }
 
   guardarInformacion(event, formData){
-    console.log(event);
-    console.log(formData.value);
+    // console.log(event);
+    console.log(formData);
     this.nombrefac=formData.value.nombre;
     this.correofac=formData.value.correo;
     this.direccionfac=formData.value.direccion;

@@ -52,31 +52,38 @@
         <button type="button" class="btn btn-info" routerLink="/home" (click)="finCompra()">Completar la orden</button>
       </div>
       <div class="col-sm-6">
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editarModal"> Editar Datos de Facturacion</button>
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#editarModal"> Editar Datos de
+          Facturacion
+        </button>
 
       </div>
     </div>
   </div>
   <div class="col-sm-3"></div>
 
-
   <div class="col-sm-12"><br></div>
 
   <div class="col-sm-1"></div>
+
   <div class=" col-sm-10 jumbotron jumbotron-fluid" *ngIf="compras.length==0">
     <div class="container">
       <div class="row">
         <div class="col-sm-6"><h3>NO EXISTEN REGISTROS DE COMPRAS</h3></div>
-        <div class="col-sm-6"align="right"><h5>TOTAL A PAGAR: {{total | currency }}</h5></div>
-        <div class="col-sm-12"><hr class="my-4"></div>
+        <div class="col-sm-6" align="right"><h5>TOTAL A PAGAR: {{total | currency }}</h5></div>
+        <div class="col-sm-12">
+          <hr class="my-4">
+        </div>
       </div>
+    </div>
   </div>
   <div class=" col-sm-10 jumbotron jumbotron-fluid" *ngIf="compras.length>0">
     <div class="container">
       <div class="row">
         <div class="col-sm-6"><h3>JUGADORES:</h3></div>
-        <div class="col-sm-6"align="right"><h5>TOTAL A PAGAR: {{total | currency }}</h5></div>
-        <div class="col-sm-12"><hr class="my-4"></div>
+        <div class="col-sm-6" align="right"><h5>TOTAL A PAGAR: {{total | currency }}</h5></div>
+        <div class="col-sm-12">
+          <hr class="my-4">
+        </div>
       </div>
     </div>
     <div *ngFor="let compra of compras; let indice=index">
@@ -99,7 +106,8 @@
                   <p class="card-text">Precio: {{compra.valor | currency }}</p>
                 </div>
                 <div class="col-sm-3" align="center">
-                  <button (click)="borrarCompras(indice)" type="button" class="btn btn-danger btn-lg">Eliminar</button>
+                  <button (click)="borrarCompras(indice)" type="button" class="btn btn-danger btn-lg">Eliminar
+                  </button>
                 </div>
               </div>
             </div>
@@ -113,10 +121,11 @@
   <div class="col-sm-1"></div>
 
 
-
 </div>
 
-<div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade" id="editarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -126,28 +135,55 @@
         </button>
       </div>
 
-        <form #datosForm="ngForm" (ngSubmit)="guardarInformacion($event, datosForm)">
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="inputNombre">Nombre y Apellido</label>
-              <input type="text" class="form-control" id="inputNombre" [value]="nombrefac" [ngModel]="nombrefac" name="nombre">
-            </div>
-            <div class="form-group">
-              <label for="inputEmail">Correo Electronico</label>
-              <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" [value]="correofac" [ngModel]="correofac" name="correo">
-            </div>
-            <div class="form-group">
-              <label for="inputDireccion">Direccion</label>
-              <input type="email" class="form-control" id="inputDireccion" aria-describedby="emailHelp" [value]="direccionfac" [ngModel]="direccionfac" name="direccion">
+      <form #datosForm="ngForm" (ngSubmit)="guardarInformacion($event, datosForm)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="inputNombre">Nombre y Apellido</label>
+            <input #inputNombre="ngModel" type="text" class="form-control" id="inputNombre" [value]="nombrefac" [ngModel]="nombrefac"
+                   name="nombre" required>
+            <div class="alert alert-danger" *ngIf="inputNombre.invalid">
+              <div *ngIf="inputNombre.errors.required">
+                Es necesario un nombre
+              </div>
             </div>
           </div>
+          <div class="form-group">
+            <label for="inputEmail">Correo Electronico</label>
+            <input #inputEmail="ngModel" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" [value]="correofac"
+                   [ngModel]="correofac" name="correo" [email]="true" required>
+            <div class="alert alert-danger" *ngIf="inputEmail.invalid">
+              <div *ngIf="inputEmail.errors.required">
+                El correo es necesario
+              </div>
+              <div *ngIf="inputEmail.errors.email">
+                Correo Electronico invalido
+              </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
           </div>
+          <div class="form-group">
+            <label for="inputDireccion">Direccion</label>
+            <input #inputDireccion="ngModel" type="email" class="form-control" id="inputDireccion" aria-describedby="emailHelp"
+                   [value]="direccionfac" [ngModel]="direccionfac" name="direccion" required>
+            <div class="alert alert-danger" *ngIf="inputDireccion.invalid">
 
-        </form>
+              <div *ngIf="inputDireccion.errors.required">
+                La direccion es requerida
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" *ngIf="datosForm.valid" (click)='guardarInformacion($event, datosForm)'
+                 class="btn btn-primary" data-dismiss="modal">Guardar
+          </button>
+
+          <!--<button type="submit" class="btn btn-primary" *ngIf="datosForm.valid">Guardar</button>-->
+        </div>
+
+      </form>
     </div>
   </div>
 </div>
