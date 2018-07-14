@@ -36,7 +36,7 @@ export class CarritoComponent implements OnInit {
 
   borrarCompras(indice: number){
     this._compras.borrarJugadores(indice);
-    this._compras.reducirIndice();
+    this._compras.actualizarTamanio();
     this.total=0;
     this.calcularTotal()
   }

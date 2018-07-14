@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {BehaviorSubject} from "rxjs/index";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ export class ComprasService {
   private _indice=0;
   private _estado:boolean;
 
+  tamanio$ = new BehaviorSubject(this._carrito.length);
 
   constructor() {}
 
@@ -57,16 +59,12 @@ console.log('tam',this._carrito.length)
     return this._estado;
   }
 
-
-  public getIndice(){
-    return this._indice;
+  public getLength() {
+    return this.tamanio$;
   }
 
-  public aumentarIndice(){
-     this._indice=this._indice+1;
+  public actualizarTamanio(){
+    this.tamanio$.next(this._carrito.length);
   }
 
-  public reducirIndice(){
-    this._indice=this._indice-1;
-  }
 }

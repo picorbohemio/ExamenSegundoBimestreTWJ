@@ -18,7 +18,8 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.indice=this._compras.getIndice();
+    // this.indice=this._compras.getLength().sub;
+    this._compras.getLength().subscribe(size=>this.indice=size);
     this.nombre=this._usuario.getUsuario()[0].nombre;
     console.log(this.indice)  }
 

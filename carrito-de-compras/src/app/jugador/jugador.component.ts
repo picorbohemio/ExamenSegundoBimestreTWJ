@@ -49,7 +49,7 @@ export class JugadorComponent implements OnInit {
 
   comprarJugador(){
     this._compras.ingresarJugadores(this.jugador);
-    this._compras.aumentarIndice();
+    this._compras.actualizarTamanio();
     console.log(this._compras)
   }
 
