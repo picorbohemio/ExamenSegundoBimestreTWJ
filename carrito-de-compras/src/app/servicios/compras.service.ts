@@ -67,4 +67,8 @@ console.log('tam',this._carrito.length)
     this.tamanio$.next(this._carrito.length);
   }
 
+  public borrarTodo(){
+    this._carrito=[];
+  }
+
 }

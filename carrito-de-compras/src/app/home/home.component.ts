@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   arrayNombresJugadores=[];
 
   j:string;
+  cargar:boolean=false;
 
 
 
@@ -77,6 +78,11 @@ export class HomeComponent implements OnInit {
     for (var i = 0; i < this.jugadores.length; i++) {
       this.arrayNombresJugadores.push(this.jugadores[i].nombre);
     }
+  }
+
+  estadoCargarMas(){
+    this.cargar=true;
+    console.log(this.cargar)
   }
 
 

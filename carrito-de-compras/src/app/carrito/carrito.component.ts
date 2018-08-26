@@ -48,7 +48,10 @@ export class CarritoComponent implements OnInit {
   }
 
   finCompra(){
+    this._compras.borrarTodo();
+    this._compras.actualizarTamanio();
     alert('Compra con exito')
+
   }
 
   cargarUsuario(){
